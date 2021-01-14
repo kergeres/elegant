@@ -1,7 +1,7 @@
 "use strict";
 
 async function loadData() {
-  let response = await fetch("../data/json.json");
+  let response = await fetch("/data/json.json");
   let jsonData = await response.json();
   console.log(jsonData); 
   appendNav(jsonData)
