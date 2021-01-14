@@ -1,0 +1,6 @@
+ha uj itemet akarsz hozzaadni akkor:
+
+
+a, json fileban kiegesziteni új objecttel aminek a title-le legyen egyenlo
+
+az új b, html file nevevel
