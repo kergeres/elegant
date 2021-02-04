@@ -8,17 +8,12 @@
     --minimal: 'Gravesend Sans';
     --royal: 'Mencken Std';
     /* #7D441A */
-
-
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-
-
 }
 
 *:focus {
@@ -68,8 +63,6 @@ header {
     letter-spacing: 1.5px;
     /* box-shadow: 0px 3px 12px 3px rgba(0, 0, 0, 0.5); */
     z-index: 5;
-
-
 }
 
 main {
@@ -101,7 +94,6 @@ nav {
 
     background: rgb(27, 13, 1);
     background: linear-gradient(90deg, rgba(27, 13, 1, 1) 0%, rgba(43, 22, 4, 1) 100%);
-
     width: 200px;
     height: 1905px;
     border-right: 4px solid var(--yellow);
@@ -112,9 +104,7 @@ nav {
     padding-top: 40px;
     position: absolute;
     left: 0px;
-
-
-
+    box-shadow: 1.5px 0px 12px 1px rgba(2, 11, 27, 0.2);
 
 }
 
@@ -185,6 +175,111 @@ a {
     font-family: var(--minimal);
 }
 
+
 @media screen and (max-width: 600px) {
-    body {}
+    nav {
+
+        background-color: white;
+        width: 300px;
+        height: 100vh;
+        left: -300px;
+        position: fixed;
+        transition: 0.5s all;
+        z-index: 3;
+        top: 0;
+        box-shadow: 2px 3px 12px -3px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-open {
+        left: 0;
+    }
+
+    .ham-cont {
+        z-index: 6;
+        top: 64px;
+        left: 20px;
+        position: fixed;
+
+    }
+
+    .ham-menu-line {
+        background: var(--dark-brown);
+        cursor: pointer;
+        height: 5px;
+        position: relative;
+        width: 40px;
+        top: 10px;
+        right: 0px;
+        display: block;
+        transition: 0.5s all;
+        border-radius: 1px;
+
+    }
+
+    .ham-menu-linea,
+    .ham-menu-lineb {
+        background: var(--dark-brown);
+        content: '';
+        display: block;
+        height: 5px;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 40px;
+        border-radius: 1px;
+        cursor: pointer;
+        transition: 0.5s all;
+    }
+
+    .ham-menu-lineb {
+        top: 1px;
+    }
+
+    .ham-menu-linea {
+        top: 20px;
+
+    }
+
+    .linea-rot {
+        transform: rotate(45deg);
+        top: 12px;
+        left: 225px;
+        transition: 0.5s all;
+        background: var(--yellow);
+    }
+
+    .lineb-rot {
+        transform: rotate(-45deg);
+        top: 12px;
+        left: 225px;
+        transition: 0.5s all;
+        background: var(--yellow);
+    }
+
+    .line-rot {
+        left: -60px;
+        transition: all 0.5s;
+    }
+
+    .content-container {
+        width: 96%;
+        margin: 0;
+        transform: unset;
+    }
+
+    .content-container p {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    header {
+        font-size: 35px;
+        z-index: -4;
+        height: 50px;
+
+    }
+
+    .headercompletor {
+        height: 8px;
+    }
+
 }
